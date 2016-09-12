@@ -1,10 +1,22 @@
 curl --data "{\
-\"id\":\"jtyf62792khv862\", \"type\":\"TX\", \
-\"date\":\"12082016\", \"amount\":\"1000\", \
-\"pan\":\"30720863976927693\", \"pan_expdate\":\"0818\", \
-\"twitterId\":\"johnDoe\", \"productCat\":\"S3\", \
-\"product\":\"Laptop\", \"NbrItems\":\"1\", \
-\"merchant\":\"Tesco\", \"location\":\"Whitechapel\n\" \
+\"terminal_id\":\"iyzgiy_utfut\", \
+\"terminal_country\":\"FR\", \
+\"card_type\":\"AMX\", \
+\"card_scheme\":\"American Express\", \
+\"card_issuing_country\":\"UK\", \
+\"vertical\":\"airline\", \
+\"id\":\"jtyf62792khv264327652762\", \
+\"type\":\"TX\", \
+\"date\":\"12082016\", \
+\"amount\":\"1000\", \
+\"pan\":\"30720863976927693\", \
+\"pan_expdate\":\"0818\", \
+\"twitterId\":\"johnDoe\", \
+\"productCat\":\"S3\", \
+\"product\":\"Laptop\", \
+\"nbrItems\":\"1\", \
+\"merchant\":\"Tesco\", \
+\"location\":\"Whitechapel\" \
 }" -v -X POST -H "Content-Type: application/json" http://localhost:8080/rpisrv/receive_tx
 
 # create kafka topic

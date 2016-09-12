@@ -11,7 +11,7 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 
 public class KafkaUtils {
 
-	private static final String KAFKA_BROCKER_URL = "192.168.56.101:6667";
+	public static final String KAFKA_BROCKER_URL = "192.168.56.101:6667";
 	private static Properties props; 
 	private static Producer<String, String> producer; 
 	private static final Random r = new Random();

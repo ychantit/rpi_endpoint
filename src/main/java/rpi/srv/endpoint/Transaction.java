@@ -2,6 +2,15 @@ package rpi.srv.endpoint;
 
 public class Transaction {
 
+	private String terminal_id;
+	private String terminal_country;
+	
+	private String card_type;
+	private String card_scheme;
+	private String card_issuing_country;
+	
+	private String vertical;
+	
 	private String id;
 	
 	private String type;
@@ -15,10 +24,70 @@ public class Transaction {
 	
 	private String productCat;
 	private String product;
-	private String NbrItems;
+	private String nbrItems;
 	
 	private String merchant;
 	private String location;
+	
+	public String getTerminal_id() {
+		return terminal_id;
+	}
+
+
+	public void setTerminal_id(String terminal_id) {
+		this.terminal_id = terminal_id;
+	}
+
+
+	public String getTerminal_country() {
+		return terminal_country;
+	}
+
+
+	public void setTerminal_country(String terminal_country) {
+		this.terminal_country = terminal_country;
+	}
+
+
+	public String getCard_type() {
+		return card_type;
+	}
+
+
+	public void setCard_type(String card_type) {
+		this.card_type = card_type;
+	}
+
+
+	public String getCard_scheme() {
+		return card_scheme;
+	}
+
+
+	public void setCard_scheme(String card_scheme) {
+		this.card_scheme = card_scheme;
+	}
+
+
+	public String getCard_issuing_country() {
+		return card_issuing_country;
+	}
+
+
+	public void setCard_issuing_country(String card_issuing_country) {
+		this.card_issuing_country = card_issuing_country;
+	}
+
+
+	public String getVertical() {
+		return vertical;
+	}
+
+
+	public void setVertical(String vertical) {
+		this.vertical = vertical;
+	}
+
 	
 	public Transaction() {
 		super();
@@ -84,10 +153,10 @@ public class Transaction {
 		this.product = product;
 	}
 	public String getNbrItems() {
-		return NbrItems;
+		return nbrItems;
 	}
 	public void setNbrItems(String nbrItems) {
-		NbrItems = nbrItems;
+		this.nbrItems = nbrItems;
 	}
 	public String getMerchant() {
 		return merchant;
@@ -105,9 +174,11 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return id + "," + type + "," + date + "," + amount + "," + pan + ","
+		return terminal_id + "," + terminal_country + "," + card_type + "," + card_scheme + "," +
+				card_issuing_country + "," + vertical + "," +
+				id + "," + type + "," + date + "," + amount + "," + pan + ","
 				+ pan_expdate + "," + twitterId + "," + productCat + "," + product + ","
-				+ NbrItems + "," + merchant + ","+ location;
+				+ nbrItems + "," + merchant + ","+ location;
 	}
 	
 }
